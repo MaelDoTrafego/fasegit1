@@ -1,0 +1,75 @@
+/* estilo.css */
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #4a90e2; /* Cor do cabeçalho */
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+strong {
+    color: #4a90e2; /* Cor dos títulos */
+}
+
+/* Estilo para o carrossel */
+.carousel {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.carousel-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+button:nth-child(2) {
+    right: 10px;
+}
+
+button:nth-child(1) {
+    left: 10px;
+}
