@@ -3,8 +3,8 @@
 /* Estilos básicos */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8; /* Cor de fundo */
-    color: #333; /* Cor do texto */
+    background-color: #f0f4f8; /#363333/
+    color: #333; /#ece7e0/
     margin: 0;
     padding: 20px;
 }
@@ -12,7 +12,7 @@ body {
 header {
     text-align: center;
     padding: 10px;
-    background-color: #4a90e2; /* Cor do cabeçalho */
+    background-color: #4a90e2; /#bdbbb6/
     color: white;
 }
 
@@ -35,7 +35,7 @@ td {
 }
 
 strong {
-    color: #4a90e2; /* Cor dos títulos */
+    color: #4a90e2; /#ffffff/
 }
 
 /* Estilo para o carrossel */
