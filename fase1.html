@@ -4,58 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Aluno</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
         <h1>Perfil do Aluno</h1>
     </header>
 
-    <!-- Foto de Perfil -->
-    <section>
-        <img src="sua_foto.jpg" alt="Foto de Perfil do Aluno" style="width: 150px; height: 150px; border-radius: 50%;">
-    </section>
+    <!-- Tabela para organizar o conteúdo -->
+    <table>
+        <tr>
+            <td colspan="2">
+                <!-- Carrossel de Fotos de Perfil -->
+                <div class="carousel">
+                    <img src="FEEDS.png" alt="Foto de Perfil 1" class="carousel-photo">
+                    <img src="FEEDS.png" alt="Foto de Perfil 2" class="carousel-photo" style="display:none;">
+                    <img src="FEEDS.png" alt="Foto de Perfil 3" class="carousel-photo" style="display:none;">
+                    <button onclick="mudarFoto(-1)">&#10094;</button>
+                    <button onclick="mudarFoto(1)">&#10095;</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Nome Completo:</strong></td>
+            <td>Ismael Stanley de Almeida 
+            </td>
+        </tr>
+        <tr>
+            <td><strong>RA:</strong></td>
+            <td>323113387</td>
+        </tr>
+        <tr>
+            <td><strong>Análise e Desenvolvimento de Sistemas:</strong></td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><strong>Cidade:</strong></td>
+            <td>Belo Horizonte</td>
+        </tr>
+        <tr>
+            <td><strong>E-mail:</strong></td>
+            <td>maeldotrafego@gmail.com</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>UCs Já Cursadas</h2>
+                <ul>
+                    <li>UC Arquitetura de Máquinas</li>
+                    <li>UC Cibersegurança</li>
+                    <li>UC Usabilidade, desenvolvimento web, mobile e jogos</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Perfil Pessoal</h2>
+                <p>Pessoa analista extremamente ambisiosa por conhecimento e desenvolvimento pessoal.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Perfil Profissional/Acadêmico</h2>
+                <p>Empreendedor no setor de marketing/tecnologia, responsável por gerar projetos e análises de mercado.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Redes Sociais</h2>
+                <p><a href="https://www.linkedin.com/in/stanleyads/" target="_blank">LinkedIn</a></p>
+            </td>
+        </tr>
+    </table>
 
-    <!-- Informações Pessoais -->
-    <section>
-        <h2>Informações Pessoais</h2>
-        <p><strong>Nome Completo:</strong> Ismael Stanley de Almeida</p>
-        <p><strong>RA:</strong>323113387</p>
-        <p><strong>Análise e Desenvolvimento de Sistemas:</strong> Seu Curso - 4 período</p>
-        <p><strong>Endereço Completo:</strong> Seu Endereço Completo</p>
-        <p><strong>E-mail:</strong> maeldotrafego@gmail.com</p>
-    </section>
+    <!-- Script para o carrossel de fotos -->
+    <script>
+        let fotoAtual = 0;
+        const fotos = document.querySelectorAll('.carousel-photo');
 
-    <!-- UCs Já Cursadas -->
-    <section>
-        <h2>UCs Já Cursadas</h2>
-        <ul>
-            <li>UC 1</li>
-            <li>UC 2</li>
-            <li>UC 3</li>
-            <!-- Adicione mais UCs conforme necessário -->
-        </ul>
-    </section>
-
-    <!-- Perfil Pessoal -->
-    <section>
-        <h2>Perfil Pessoal</h2>
-        <p>Breve descrição do seu perfil pessoal, incluindo hobbies, família, esportes etc.</p>
-    </section>
-
-    <!-- Perfil Profissional/Acadêmico -->
-    <section>
-        <h2>Perfil Profissional/Acadêmico</h2>
-        <p>Breve descrição do seu perfil profissional ou acadêmico.</p>
-    </section>
-
-    <!-- Links de Redes Sociais -->
-    <section>
-        <h2>Redes Sociais</h2>
-        <p>
-            <a href="https://www.linkedin.com/in/stanleyads/" target="_blank">LinkedIn</a>
-            <!-- Adicione outros links de redes sociais, se desejar -->
-        </p>
-    </section>
-
+        function mudarFoto(direcao) {
+            fotos[fotoAtual].style.display = 'none';
+            fotoAtual = (fotoAtual + direcao + fotos.length) % fotos.length;
+            fotos[fotoAtual].style.display = 'block';
+        }
+    </script>
 </body>
 </html>
+
